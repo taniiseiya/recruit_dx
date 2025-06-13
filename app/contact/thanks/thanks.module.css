@@ -1,0 +1,293 @@
+/* app/contact/thanks/thanks.module.css */
+
+/* フェードインアニメーション */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes checkAnimation {
+    0% {
+      stroke-dashoffset: 100;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  /* セクション全体 */
+  .thanksSection {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .thanksContainer {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* ヘッダー部分 */
+  .thanksHeader {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .thanksTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  
+  .titleUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #3b82f6;
+  }
+  
+  /* メインコンテンツ */
+  .thanksContent {
+    text-align: center;
+  }
+  
+  /* 完了メッセージ */
+  .completeMessage {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .iconWrapper {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .checkIcon {
+    width: 80px;
+    height: 80px;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: checkAnimation 0.8s ease-out 0.5s forwards;
+  }
+  
+  .completeTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* 補足メッセージ */
+  .thanksMessage {
+    margin-bottom: 50px;
+  }
+  
+  .messageText {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin: 0 0 20px 0;
+  }
+  
+  .subMessage {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+  }
+  
+  .phoneInfo {
+    font-weight: bold;
+    color: #3b82f6;
+  }
+  
+  /* 追加情報 */
+  .additionalInfo {
+    margin-bottom: 50px;
+  }
+  
+  .infoCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .infoTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .infoText {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .documentLink {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .documentLink:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* ボタンエリア */
+  .buttonArea {
+    margin-top: 40px;
+  }
+  
+  .topButton {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .topButton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+  
+  .topButton:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .topButton:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* フェードインアニメーション用クラス */
+  .fadeIn {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fadeIn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .thanksSection {
+      padding: 60px 20px;
+    }
+  
+    .thanksHeader {
+      margin-bottom: 40px;
+    }
+  
+    .thanksTitle {
+      font-size: 24px;
+      padding-bottom: 15px;
+    }
+  
+    .checkIcon {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .completeTitle {
+      font-size: 24px;
+    }
+  
+    .messageText {
+      font-size: 14px;
+    }
+  
+    .subMessage {
+      font-size: 13px;
+    }
+  
+    .infoCard {
+      padding: 20px;
+    }
+  
+    .topButton {
+      padding: 12px 30px;
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .thanksTitle {
+      font-size: 20px;
+    }
+  
+    .completeTitle {
+      font-size: 20px;
+    }
+  
+    .messageText {
+      font-size: 13px;
+    }
+  
+    .infoTitle {
+      font-size: 16px;
+    }
+  
+    .infoText {
+      font-size: 13px;
+    }
+  
+    .topButton {
+      font-size: 14px;
+      padding: 10px 24px;
+    }
+  }

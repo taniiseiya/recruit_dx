@@ -1,0 +1,451 @@
+/* app/document-request/contact.module.css */
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* セクション全体 */
+.contactSection {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 60px 0;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.contactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ヘッダー部分 */
+.contactHeader {
+  margin-bottom: 50px;
+}
+
+.contactTitle {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.titleUnderline {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #3b82f6;
+}
+
+/* メインコンテンツ */
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* 左カラム */
+.contentLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: fadeIn 1s ease-out 0.4s both;
+}
+
+/* 資料ビジュアル */
+.materialVisual {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainImage {
+  width: 70%;
+}
+
+.mainImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnailList {
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnailList img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.thumbnailList img:nth-child(1) {
+  animation-delay: 0.8s;
+}
+
+.thumbnailList img:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.thumbnailList img:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.thumbnailList img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 説明テキスト */
+.materialDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.subTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.descriptionText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* メリットリスト */
+.benefitList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+  transition: transform 0.3s ease;
+}
+
+.benefitItem:nth-child(1) {
+  animation-delay: 1.1s;
+}
+
+.benefitItem:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.benefitItem:nth-child(3) {
+  animation-delay: 1.3s;
+}
+
+.benefitItem:nth-child(4) {
+  animation-delay: 1.4s;
+}
+
+.benefitItem:hover {
+  transform: translateX(10px);
+}
+
+.checkIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* 右カラム：フォーム */
+.contentRight {
+  position: sticky;
+  top: 20px;
+  animation: fadeInScale 1s ease-out 0.6s both;
+}
+
+.formWrapper {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.formHeader {
+  margin-bottom: 30px;
+}
+
+.formTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.formSubtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+/* フォームフィールド */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.requiredLabel {
+  background-color: #3b82f6;
+  color: white;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: normal;
+}
+
+.fieldInput,
+.fieldSelect,
+.fieldTextarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.fieldInput:focus,
+.fieldSelect:focus,
+.fieldTextarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.fieldInput.error,
+.fieldSelect.error {
+  border-color: #dc3545;
+}
+
+/* 姓名フィールド */
+.nameField .nameInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.nameInputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* テキストエリア */
+.fieldTextarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* チェックボックス */
+.privacyField {
+  margin-top: 10px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkboxInput {
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.checkboxText {
+  font-size: 14px;
+  color: #333;
+}
+
+.privacyLink {
+  color: #333;
+  text-decoration: underline;
+  text-decoration-color: #3b82f6;
+  text-decoration-thickness: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.privacyLink:hover {
+  opacity: 0.7;
+}
+
+/* エラーメッセージ */
+.errorMessage {
+  font-size: 12px;
+  color: #dc3545;
+  margin-top: 5px;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* 送信ボタン */
+.submitButton {
+  width: 100%;
+  padding: 15px;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submitButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.submitButton:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.submitButton:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.submitButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* スクロールで表示されるアニメーション用クラス */
+.fadeInOnScroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fadeInOnScroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 40px 0;
+  }
+
+  .contactTitle {
+    font-size: 24px;
+  }
+
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contentRight {
+    position: static;
+  }
+
+  .mainImage {
+    width: 100%;
+  }
+
+  .thumbnailList {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .formWrapper {
+    padding: 25px 20px;
+  }
+
+  .nameField .nameInputs {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .submitButton {
+    font-size: 16px;
+  }
+}

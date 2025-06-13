@@ -1,0 +1,239 @@
+/* app/thanks/thanks.module.css */
+
+/* フェードインアニメーション */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* セクション全体 */
+  .thanksSection {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .thanksContainer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* ヘッダー部分 */
+  .thanksHeader {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .thanksTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  
+  .titleUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #3b82f6;
+  }
+  
+  /* メインコンテンツ */
+  .thanksContent {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* 完了メッセージ */
+  .completeMessage {
+    margin-bottom: 40px;
+  }
+  
+  .completeTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #3b82f6;
+    margin: 0;
+  }
+  
+  /* 補足メッセージ */
+  .thanksMessage {
+    margin-bottom: 50px;
+  }
+  
+  .messageText {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* ボタンラッパー */
+  .buttonWrapper {
+    margin-bottom: 40px;
+  }
+  
+  /* ダウンロードボタン */
+  .downloadButton {
+    width: 260px;
+    padding: 18px 32px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .downloadButton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+  
+  .downloadButton:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .downloadButton:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .downloadButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* リンクラッパー */
+  .linkWrapper {
+    margin-top: 30px;
+  }
+  
+  /* TOPへ戻るリンク */
+  .topLink {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .topLink:hover {
+    color: #3b82f6;
+    transform: translateY(-2px);
+  }
+  
+  .topLink::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+  }
+  
+  .topLink:hover::after {
+    width: 100%;
+  }
+  
+  /* フェードインアニメーション用クラス */
+  .fadeIn {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fadeIn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .thanksSection {
+      padding: 60px 20px;
+    }
+  
+    .thanksHeader {
+      margin-bottom: 60px;
+    }
+  
+    .thanksTitle {
+      font-size: 24px;
+      padding-bottom: 15px;
+    }
+  
+    .completeTitle {
+      font-size: 24px;
+    }
+  
+    .messageText {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  
+    .downloadButton {
+      width: 100%;
+      max-width: 260px;
+      font-size: 15px;
+      padding: 16px 24px;
+    }
+  
+    .topLink {
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .thanksTitle {
+      font-size: 20px;
+    }
+  
+    .completeTitle {
+      font-size: 20px;
+    }
+  
+    .messageText {
+      font-size: 13px;
+    }
+  
+    .downloadButton {
+      font-size: 14px;
+      padding: 14px 20px;
+    }
+  }

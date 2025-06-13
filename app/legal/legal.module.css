@@ -1,0 +1,1122 @@
+/* app/legal/legal.module.css */
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* セクション全体 */
+  .legalSection {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding: 60px 0;
+  }
+  
+  .legalContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* ヘッダー部分 */
+  .legalHeader {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .legalTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+  }
+  
+  .titleUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #3b82f6;
+  }
+  
+  /* コンテンツ */
+  .legalContent {
+    background-color: white;
+    border-radius: 12px;
+    padding: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* イントロテキスト */
+  .introText {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .introText p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  /* セクション */
+  .section {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    position: relative;
+  }
+  
+  .sectionTitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background-color: #3b82f6;
+  }
+  
+  .sectionContent {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .sectionContent p {
+    margin-bottom: 15px;
+  }
+  
+  .sectionContent p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* リスト */
+  .list {
+    margin-top: 15px;
+    padding-left: 20px;
+  }
+  
+  .list li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .list li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+  }
+  
+  /* 連絡先情報 */
+  .contactInfo {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+  }
+  
+  .contactInfo p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .contactInfo p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* 日付情報 */
+  .dateInfo {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .dateInfo p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .dateInfo p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* フェードインアニメーション */
+  .fadeIn {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .fadeIn:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .fadeIn:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .fadeIn:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .fadeIn:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  .fadeIn:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  
+  .fadeIn:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  
+  .fadeIn:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  
+  .fadeIn:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  
+  .fadeIn:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+  
+  .fadeIn:nth-child(10) {
+    animation-delay: 1s;
+  }
+  
+  /* スクロールアニメーション */
+  .fadeIn.visible {
+    opacity: 1;
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .legalSection {
+      padding: 40px 0;
+    }
+  
+    .legalHeader {
+      margin-bottom: 40px;
+    }
+  
+    .legalTitle {
+      font-size: 28px;
+    }
+  
+    .legalContent {
+      padding: 30px 20px;
+    }
+  
+    .sectionTitle {
+      font-size: 18px;
+    }
+  
+    .sectionContent {
+      font-size: 14px;
+    }
+  
+    .list li {
+      margin-bottom: 8px;
+    }
+  
+    .contactInfo {
+      padding: 15px;
+    }
+  
+    .contactInfo p {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .legalTitle {
+      font-size: 24px;
+    }
+  
+    .legalContent {
+      padding: 25px 15px;
+    }
+  
+    .sectionTitle {
+      font-size: 16px;
+    }
+  
+    .sectionContent {
+      font-size: 13px;
+    }
+  }
+  /* app/legal/legal.module.css */
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* セクション全体 */
+  .legalSection {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding: 60px 0;
+  }
+  
+  .legalContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* ヘッダー部分 */
+  .legalHeader {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .legalTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+  }
+  
+  .titleUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #3b82f6;
+  }
+  
+  /* コンテンツ */
+  .legalContent {
+    background-color: white;
+    border-radius: 12px;
+    padding: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* イントロテキスト */
+  .introText {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .introText p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  /* セクション */
+  .section {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    position: relative;
+  }
+  
+  .sectionTitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background-color: #3b82f6;
+  }
+  
+  .sectionContent {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .sectionContent p {
+    margin-bottom: 15px;
+  }
+  
+  .sectionContent p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* リスト */
+  .list {
+    margin-top: 15px;
+    padding-left: 20px;
+  }
+  
+  .list li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .list li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+  }
+  
+  /* サブリスト */
+  .subList {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .subList li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .subList li::before {
+    content: '◦';
+    color: #6b7280;
+  }
+  
+  /* 連絡先情報 */
+  .contactInfo {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+  }
+  
+  .contactInfo p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .contactInfo p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* 日付情報 */
+  .dateInfo {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .dateInfo p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .dateInfo p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* フェードインアニメーション */
+  .fadeIn {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .fadeIn:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .fadeIn:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .fadeIn:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .fadeIn:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  .fadeIn:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  
+  .fadeIn:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  
+  .fadeIn:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  
+  .fadeIn:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  
+  .fadeIn:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+  
+  .fadeIn:nth-child(10) {
+    animation-delay: 1s;
+  }
+  
+  /* スクロールアニメーション */
+  .fadeIn.visible {
+    opacity: 1;
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .legalSection {
+      padding: 40px 0;
+    }
+  
+    .legalHeader {
+      margin-bottom: 40px;
+    }
+  
+    .legalTitle {
+      font-size: 28px;
+    }
+  
+    .legalContent {
+      padding: 30px 20px;
+    }
+  
+    .sectionTitle {
+      font-size: 18px;
+    }
+  
+    .sectionContent {
+      font-size: 14px;
+    }
+  
+    .list li {
+      margin-bottom: 8px;
+    }
+  
+    .contactInfo {
+      padding: 15px;
+    }
+  
+    .contactInfo p {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .legalTitle {
+      font-size: 24px;
+    }
+  
+    .legalContent {
+      padding: 25px 15px;
+    }
+  
+    .sectionTitle {
+      font-size: 16px;
+    }
+  
+    .sectionContent {
+      font-size: 13px;
+    }
+  }
+  
+  /* app/legal/legal.module.css */
+
+/* 会社概要専用スタイル */
+.companySection {
+    margin-bottom: 50px;
+  }
+  
+  .companyTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .companyTable th,
+  .companyTable td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .companyTable th {
+    width: 30%;
+    font-weight: bold;
+    color: #333;
+    background-color: #f8fafc;
+    font-size: 15px;
+  }
+  
+  .companyTable td {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.8;
+  }
+  
+  .companyTable tr:last-child th,
+  .companyTable tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .companyLink {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .companyLink:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+  
+  /* 事業内容 */
+  .businessContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .businessItem {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .businessItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .businessIcon {
+    width: 60px;
+    height: 60px;
+    background-color: #e0f2fe;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .businessIcon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .businessInfo {
+    flex: 1;
+  }
+  
+  .businessTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .businessDescription {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  /* アクセス */
+  .accessContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .accessInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .accessAddress {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .accessDetails {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .stationList {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .stationList li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+  
+  .mapPlaceholder {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    border: 2px dashed #d1d5db;
+  }
+  
+  .mapInfo {
+    text-align: center;
+    color: #6b7280;
+  }
+  
+  .mapIcon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+  
+  /* お問い合わせ */
+  .contactContent {
+    text-align: center;
+  }
+  
+  .contactContent p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .contactButtons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .contactButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .contactButton:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+  
+  .contactButton svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .companyTable th {
+      width: 40%;
+      font-size: 14px;
+      padding: 15px;
+    }
+  
+    .companyTable td {
+      font-size: 14px;
+      padding: 15px;
+    }
+  
+    .businessItem {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .businessIcon {
+      margin: 0 auto;
+    }
+  
+    .accessContent {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  
+    .mapPlaceholder {
+      min-height: 200px;
+    }
+  
+    .contactButtons {
+      flex-direction: column;
+    }
+  
+    .contactButton {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  /* フェードインアニメーション */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* セクション全体 */
+  .legalSection {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding: 60px 0;
+  }
+  
+  .legalContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* ヘッダー部分 */
+  .legalHeader {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .legalTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+  }
+  
+  .titleUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #3b82f6;
+  }
+  
+  /* コンテンツ */
+  .legalContent {
+    background-color: white;
+    border-radius: 12px;
+    padding: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* イントロテキスト */
+  .introText {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .introText p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  /* セクション */
+  .section {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    position: relative;
+  }
+  
+  .sectionTitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background-color: #3b82f6;
+  }
+  
+  .sectionContent {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .sectionContent p {
+    margin-bottom: 15px;
+  }
+  
+  .sectionContent p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* リスト */
+  .list {
+    margin-top: 15px;
+    padding-left: 20px;
+  }
+  
+  .list li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .list li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+  }
+  
+  /* サブリスト */
+  .subList {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .subList li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .subList li::before {
+    content: '◦';
+    color: #6b7280;
+  }
+  
+  /* 連絡先情報 */
+  .contactInfo {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+  }
+  
+  .contactInfo p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .contactInfo p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* 日付情報 */
+  .dateInfo {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .dateInfo p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .dateInfo p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* フェードインアニメーション */
+  .fadeIn {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .fadeIn:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .fadeIn:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .fadeIn:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .fadeIn:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  .fadeIn:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  
+  .fadeIn:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  
+  .fadeIn:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  
+  .fadeIn:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  
+  .fadeIn:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+  
+  .fadeIn:nth-child(10) {
+    animation-delay: 1s;
+  }
+  
+  /* スクロールアニメーション */
+  .fadeIn.visible {
+    opacity: 1;
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .legalSection {
+      padding: 40px 0;
+    }
+  
+    .legalHeader {
+      margin-bottom: 40px;
+    }
+  
+    .legalTitle {
+      font-size: 28px;
+    }
+  
+    .legalContent {
+      padding: 30px 20px;
+    }
+  
+    .sectionTitle {
+      font-size: 18px;
+    }
+  
+    .sectionContent {
+      font-size: 14px;
+    }
+  
+    .list li {
+      margin-bottom: 8px;
+    }
+  
+    .contactInfo {
+      padding: 15px;
+    }
+  
+    .contactInfo p {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .legalTitle {
+      font-size: 24px;
+    }
+  
+    .legalContent {
+      padding: 25px 15px;
+    }
+  
+    .sectionTitle {
+      font-size: 16px;
+    }
+  
+    .sectionContent {
+      font-size: 13px;
+    }
+  }
