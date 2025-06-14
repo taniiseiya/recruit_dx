@@ -1,44 +1,25 @@
 // app/api/contact-form/route.ts
 import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer'; // 追加
 
 export async function POST(request: Request) {
   try {
     const data = await request.json();
-    
-    // 開発環境用：コンソールに出力
-    console.log('お問い合わせ受信:', {
-      会社名: data.companyName,
-      お名前: `${data.lastName} ${data.firstName}`,
-      Email: data.email,
-      電話番号: data.phone,
-      お問い合わせ種別: data.inquiryType,
-      お問い合わせ内容: data.inquiry,
-      送信日時: new Date().toLocaleString('ja-JP')
-    });
 
-    // メール送信処理（実装例）
-    // 注意：実際のメール送信には以下のいずれかが必要です：
-    // 1. Nodemailer + SMTPサーバー情報
-    // 2. SendGrid APIキー
-    // 3. AWS SES
-    // 4. Resend API等
-
-    // Nodemailerを使用する例（要インストール: npm install nodemailer @types/nodemailer）
-    /*
-    import nodemailer from 'nodemailer';
-
+    // --- メール送信処理 ---
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
+      host: 'sv15051.xserver.jp', // XサーバーSMTP
       port: 587,
+      secure: false, // 465ならtrue、587ならfalse
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: 'info@bluetruck.jp',      // Xサーバーのメールアドレス
+        pass: 'earn768GOER383',         // 上記メールのパスワード
       },
     });
 
     const mailOptions = {
-      from: '"採用フルサポートONE" <noreply@bluetruck.jp>',
-      to: 'info@bluetruck.jp',
+      from: '"採用フルサポートONE" <info@bluetruck.jp>', // 差出人
+      to: 'info@bluetruck.jp',                             // 受信先（必要に応じて複数やユーザー入力値に変更可）
       subject: '【お問い合わせ】採用フルサポートONE',
       text: `
 お問い合わせを受信しました。
@@ -57,10 +38,10 @@ ${data.inquiry}
       `,
     };
 
+    // 実際に送信
     await transporter.sendMail(mailOptions);
-    */
 
-    // 開発環境では成功レスポンスを返す
+    // レスポンス
     return NextResponse.json({
       success: true,
       message: '送信が完了しました',
@@ -75,7 +56,7 @@ ${data.inquiry}
     return NextResponse.json(
       { 
         success: false,
-        error: 'サーバーエラーが発生しました' 
+        error: 'サーバーエラーが発生しました'
       },
       { status: 500 }
     );
