@@ -448,7 +448,7 @@ export default function Home() {
       {/* 右側のボタン */}
       <div className="button-wrapper">
         <div className="label label-navy">相談無料！採用のお悩みを伺います！</div>
-        <a href="https://timerex.net/s/taniseiya613/20ef2bc3" className="button button-bright-blue">
+        <a href="https://timerex.net/s/taniseiya613/1d840290" className="button button-bright-blue">
           <span className="button-text">オンライン採用相談</span>
           <span className="arrow">＞</span>
         </a>
